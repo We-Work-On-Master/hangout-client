@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HangOut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
+
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <h1>HangOut</h1>
+      <div class='sidebar'>
+        <div class='user-actions'>
+          <div class='user-messages' id='user-messages'></div>
+          <form id='sign-up'>
+            <input name='credentials[email]' type='email' class="input-field" placeholder='example@example'>
+            <br>
+            <input name='credentials[password]' type='password' class="input-field" placeholder='password'>
+            <br>
+            <input name='credentials[password_confirmation]' type='password' class="input-field" placeholder='password'>
+            <br>
+            <input type='submit' value='Sign up'>
+            <br>
+          </form>
+          <br>
+
+          <form id='sign-in'>
+            <input name='credentials[email]' type='email' class="input-field" placeholder='example@example'>
+            <br>
+            <input name='credentials[password]' type='password' class="input-field" placeholder='password'>
+            <br>
+            <input type='submit' value='Sign in'>
+            <br>
+          </form>
+
+          <form class='create-event' id='create-event'>
+            <label for='event-title'>Make a new event</label>
+            <input name='event[title]' type='text' placeholder='Title [required]' id='event-title'>
+            <br>
+            <input name='event[date]' type='text' placeholder='12/31/2000'>
+            <br>
+            <input name='event[time]' type='text' placeholder='4:00 PM'>
+            <br>
+            <input name='event[location]' type='text' placeholder='Location'>
+            <br>
+            <input name='event[description]' type='text' placeholder='Description'>
+            <br>
+            <input type='submit' value='Create Event!'>
+            <br>
+          </form>
+
+          <form id='index-event'>
+            <input type='submit' value='Get All Events!'>
+          </form>
+
+          <form id='show-owned'>
+            <input type='submit' value="Show Owned Events">
+          </form>
+          <br>
+          <div class="pwd-and-sign-out">
+            <form class="change-password" id='change-password'>
+              <label for='change-pwd'>Change your password</label>
+              <input name='passwords[old]' type='password' class="input-field" placeholder='Old password' id='change-pwd'>
+              <br>
+              <input name='passwords[new]' type='password' class="input-field" placeholder='New password'>
+              <br>
+              <input type='submit' value='Change password!'>
+              <br>
+            </form>
+            <br>
+            <form class="sign-out" id='sign-out'>
+                <input type='submit' value='Sign out'>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-9 events-column" id="event-list"></div>
+        </div>
+      </div>
+
+  </body>
+</html>
